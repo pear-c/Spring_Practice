@@ -27,7 +27,7 @@ public class CoffeeApiController {
     }
 
     // POST
-    @PostMapping("/api/coffees/{id}")
+    @PostMapping("/api/coffees")
     public Coffee create(@RequestBody CoffeeDto dto) {
         Coffee coffee = dto.toEntity();
         return coffeeRepository.save(coffee);
